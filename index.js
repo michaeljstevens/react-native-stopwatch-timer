@@ -1,3 +1,1 @@
-import Stopwatch from './src/stopwatch.js';
-
-export default Stopwatch;
+module.exports = require('./lib/test.js');
