@@ -14,29 +14,19 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 
 #### Stopwatch and Timer Options
 
-```js
-start
-```
-```js
-stop
-```
-```js
-reset
-```
-```js
-msecs(enables milliseconds)
-```
-```js
-options(pass in styles object, override default styling)
-```
+|Name|Type|Description|Default|
+|----|----|-----------|------|
+|start|boolean|starts timer/stopwatch if true, stops if false|false|
+|reset|boolean|stops timer/stopwatch, resets|false|
+|msecs|boolean|includes milliseconds in render of time|false|
+|options|object|describes style of rendered timer/stopwatch|see example|
 
 #### Timer Options
 
-```js
-totalDuration(length of timer in milliseconds)
-```
-
-
+|Name|Type|Description|Default|
+|----|----|-----------|------|
+|totalDuration|Integer|number of milliseconds to set timer for|0|
+|handleFinish|function|function to perform when timer completes|function() { console.log("Timer Finished") }|
 
 ### Example
 
@@ -92,7 +82,8 @@ class TestApp extends Component {
         </TouchableHighlight>
         <Timer totalDuration={this.state.totalDuration} msecs start={this.state.timerStart}
           reset={this.state.timerReset}
-          options={stopwatchStyle}/>
+          options={stopwatchStyle}
+          handleFinish={handleTimerComplete}/>
         <TouchableHighlight onPress={this.toggleTimer}>
           <Text style={{fontSize: 30}}>{!this.state.timerStart ? "Start" : "Stop"}</Text>
         </TouchableHighlight>
