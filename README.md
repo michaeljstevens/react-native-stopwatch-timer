@@ -104,7 +104,7 @@ const timerStyle = {
     borderRadius: 5,
     width: 220,
   },
-  timer: {
+  text: {
     fontSize: 30,
     color: '#FFF',
     marginLeft: 7,
