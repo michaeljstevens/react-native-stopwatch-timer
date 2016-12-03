@@ -2,6 +2,8 @@
 
 A React Native component that provides a stopwatch and timer.
 
+<img width="400px" src="./docs/screenshots/Screen Shot 2016-12-03 at 12.54.31 PM.png" />
+
 ### Instructions
 
 ```npm install react-native-stopwatch-timer```
@@ -73,7 +75,7 @@ class TestApp extends Component {
       <View>
         <Stopwatch msecs start={this.state.stopwatchStart}
           reset={this.state.stopwatchReset}
-          options={timerStyle}/>
+          options={options}/>
         <TouchableHighlight onPress={this.toggleStopwatch}>
           <Text style={{fontSize: 30}}>{!this.state.stopwatchStart ? "Start" : "Stop"}</Text>
         </TouchableHighlight>
@@ -82,7 +84,7 @@ class TestApp extends Component {
         </TouchableHighlight>
         <Timer totalDuration={this.state.totalDuration} msecs start={this.state.timerStart}
           reset={this.state.timerReset}
-          options={stopwatchStyle}
+          options={options}
           handleFinish={handleTimerComplete}/>
         <TouchableHighlight onPress={this.toggleTimer}>
           <Text style={{fontSize: 30}}>{!this.state.timerStart ? "Start" : "Stop"}</Text>
@@ -97,7 +99,7 @@ class TestApp extends Component {
 
 const handleTimerComplete = () => alert("custom completion function");
 
-const timerStyle = {
+const options = {
   container: {
     backgroundColor: '#000',
     padding: 5,
@@ -110,21 +112,6 @@ const timerStyle = {
     marginLeft: 7,
   }
 };
-
-const stopwatchStyle = {
-  container: {
-    backgroundColor: '#000',
-    padding: 5,
-    borderRadius: 5,
-    width: 220,
-  },
-  text: {
-    fontSize: 30,
-    color: '#FFF',
-    marginLeft: 7,
-  }
-};
-
 
 AppRegistry.registerComponent('TestApp', () => TestApp);
 
