@@ -28,7 +28,7 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |Name|Type|Description|Default|
 |----|----|-----------|------|
 |totalDuration|Integer|number of milliseconds to set timer for|0|
-|handleFinish|function|function to perform when timer completes|function() { console.log("Timer Finished") }|
+|handleFinish|function|function to perform when timer completes|() => alert("Timer Finished")|
 
 ### Example
 
