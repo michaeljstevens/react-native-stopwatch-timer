@@ -28,7 +28,7 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |Name|Type|Description|Default|
 |----|----|-----------|------|
 |laps|boolean|will not count the laps of the stopped stopwatch|false|
-|getTime|function|get the formatted value each tick|see example|
+|getTime|function|get the formatted value on each tick|see example|
 
 
 #### Timer Options
@@ -77,10 +77,9 @@ class TestApp extends Component {
     this.setState({stopwatchStart: false, stopwatchReset: true});
   }
   
-  getFormattedTime = (time) => {
-          return time;
-      }
-
+  getFormattedTime(time) {
+      this.currentTime = time;
+  };
 
   render() {
     return (
@@ -129,8 +128,3 @@ const options = {
 AppRegistry.registerComponent('TestApp', () => TestApp);
 
 ```
-
-
-### Future Direction
-
-I would like to add laps to the stopwatch feature.
