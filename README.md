@@ -28,7 +28,7 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |Name|Type|Description|Default|
 |----|----|-----------|------|
 |laps|boolean|will not count the laps of the stopped stopwatch|false|
-|getTime|function|get the formatted value on each tick|see example|
+|getTime|function|get the formatted value on each tick|(time) => console.log(time)|
 
 
 #### Timer Options
@@ -37,6 +37,7 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |----|----|-----------|------|
 |totalDuration|Integer|number of milliseconds to set timer for|0|
 |handleFinish|function|function to perform when timer completes|() => alert("Timer Finished")|
+|getTime|function|get the formatted value on each tick|(time) => console.log(time)|
 
 ### Example
 
@@ -97,7 +98,8 @@ class TestApp extends Component {
         <Timer totalDuration={this.state.totalDuration} msecs start={this.state.timerStart}
           reset={this.state.timerReset}
           options={options}
-          handleFinish={handleTimerComplete}/>
+          handleFinish={handleTimerComplete}
+          getTime={this.getFormattedTime} />
         <TouchableHighlight onPress={this.toggleTimer}>
           <Text style={{fontSize: 30}}>{!this.state.timerStart ? "Start" : "Stop"}</Text>
         </TouchableHighlight>
