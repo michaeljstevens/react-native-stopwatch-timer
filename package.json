@@ -13,5 +13,8 @@
   ],
   "author": {
     "name": "Michael Stevens"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
   }
 }

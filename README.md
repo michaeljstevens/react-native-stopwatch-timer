@@ -22,13 +22,15 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |reset|boolean|stops timer/stopwatch, resets|false|
 |msecs|boolean|includes milliseconds in render of time|false|
 |options|object|describes style of rendered timer/stopwatch|see example|
+|getTime|function|get the formatted value on each tick|(time) => console.log(time)|
+
 
 #### Stopwatch Options
 
 |Name|Type|Description|Default|
 |----|----|-----------|------|
 |laps|boolean|will not count the laps of the stopped stopwatch|false|
-|getTime|function|get the formatted value on each tick|(time) => console.log(time)|
+|startTime|number|number of milliseconds to start stopwatch from|0|
 
 
 #### Timer Options
@@ -37,7 +39,6 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |----|----|-----------|------|
 |totalDuration|Integer|number of milliseconds to set timer for|0|
 |handleFinish|function|function to perform when timer completes|() => alert("Timer Finished")|
-|getTime|function|get the formatted value on each tick|(time) => console.log(time)|
 
 ### Example
 
