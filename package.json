@@ -1,6 +1,6 @@
 {
   "name": "react-native-stopwatch-timer",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "A stopwatch/timer component for React Native.",
   "repository": {
     "type": "git",
@@ -13,5 +13,8 @@
   ],
   "author": {
     "name": "Michael Stevens"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
   }
 }
