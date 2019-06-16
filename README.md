@@ -23,6 +23,7 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |msecs|boolean|includes milliseconds in render of time|false|
 |options|object|describes style of rendered timer/stopwatch|see example|
 |getTime|function|get the formatted value on each tick|(time) => console.log(time)|
+|getMsecs|function|get the number of msecs on each tick|(time) => console.log(time)|
 
 
 #### Stopwatch Options
