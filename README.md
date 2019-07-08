@@ -24,6 +24,7 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
 |options|object|describes style of rendered timer/stopwatch|see example|
 |getTime|function|get the formatted value on each tick|(time) => console.log(time)|
 |getMsecs|function|get the number of msecs on each tick|(time) => console.log(time)|
+|tickInterval|number|set the interval for the getTime and getMsecs functions to be executed|1ms
 
 
 #### Stopwatch Options
